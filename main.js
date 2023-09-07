@@ -57,7 +57,6 @@ function main() {
         console.log("Option invalide.");
     }
 
-    // Rappel de la fonction principale
     main();
   });
 }

@@ -1,8 +1,9 @@
 // console.log(100_001 * 10 ** 18 * 10 ** -17)
 // console.log(100_001 * 10 ** 18 * 10 ** -15)
 // console.log(100_001 * 10 ** 18 * 10 ** -14)
-
 // L'erreur semble apparaitre au delà de 10 ** -14
+
+
 // 1ère idée : calculer la somme en commençant par additioner les exposants
 // a * 10 ** expA * 10 ** expB = a * 10 ** (expA + expB)
 

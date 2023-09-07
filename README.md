@@ -19,13 +19,15 @@ Les deux formules précédentes nécéssitent que quelqu'un puisse lire la formu
 
 Une formule comme " 100001 * 10 ** 18 * 10 ** -17" sera retournée sous la forme " 100001 * 10 * 1"
 
+(La fonction est pour le moment dans sa V1 et ne fonctionne pas parfaitement)
+
 ## BigInt (option 4)
+
+Dans le fichier `bigInt.js` on retrouve une liste d'expérimentation sur les entier et les flotant pour souligner les différents points bloquants.
 
 Les fonctions présentée ci-dessus permettent de contourner les erreurs de calculs obtenue lorsque l'on multiplie des puissances de 10 négatives et positives entre elles. Les puissance de 10 sont factorisées et ramenées à des puissances acceptable pour l'ordinateur.
 
 Mais dans certain cas extrèmes cela ne suffit pas et des erreurs de calculs apparaissent. Notamment lorsque la valeur calculée dépasse la valeur `MAX_SAFE_INTEGER`.
 Pour palier à ce problème particulier et dans notre cas précis j'ai décidé d'essayer une approche différentes.
 
-Dans le fichier `bigInt.js` on retrouve une liste d'expérimentation sur les entier et les flotant pour souligner les différents points bloquants.
-
-L'idée ici est d'ajouter des "0" sur une chaine de caractère que l'on convertira ensuite en flottant
+Une autre idée pour pouvoir contourner le problème de calcul des grandes puissance de 10 serait de construire les nombre avec des string en ajoutant les "0" nécéssaires au début où à la fin, puis en utilisant la fonction `parseFloat` pour retourner sur un nombre utilisable et surtour mathématiquement exact. (à venir)

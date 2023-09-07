@@ -1,5 +1,4 @@
 export function factorizeFormula(formula) {
-    // Utilisation d'une expression régulière pour trouver des motifs d'exposants (par exemple, **3) et des facteurs (par exemple, 10)
         const regex = /(\d+\.\d+|\d+|\*\*|-?\d+\.\d+|-?\d+)/g;
         const tokens = formula.match(regex);
         // console.log(tokens)
@@ -49,13 +48,13 @@ export function factorizeFormula(formula) {
         if (currentFactor !== null) {
             resultFactors.push(currentFactor + (currentExponent !== 0 ? ` * 10 ** ${currentExponent}` : ""));
         }
-        console.log(resultFactors, currentFactor, currentExponent)
-        console.log(resultFactors.join(" * "))
+        // console.log(resultFactors, currentFactor, currentExponent)
+        // console.log(resultFactors.join(" * "))
         return resultFactors.join(" * ");
     }
       
-    const formula = "100001 * 10 ** 18 * 10 ** -17";
-    console.log(factorizeFormula(formula));
+    // const formula = "100001 * 10 ** 18 * 10 ** -17";
+    // console.log(factorizeFormula(formula));
 
-    console.log(10000100 ** (18 - 16))
+
     
