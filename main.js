@@ -13,7 +13,7 @@ const rl = readline.createInterface({
 function main() {
   console.log("Sélectionnez une option :");
   console.log("1. Exécuter les fonctions de factorisation simple (2 exposants)");
-  console.log("1. Exécuter les fonctions de factorisation multiple (n exposants)");
+  console.log("2. Exécuter les fonctions de factorisation multiple (n exposants)");
   console.log("3. Exécuter la fonction de factorisation d'une formule (string)");
   console.log("4. Afficher les expérimentations")
   console.log("5. Quitter");
@@ -44,6 +44,7 @@ function main() {
       case '3':
         console.log("\n")
         console.log("100001 * 10 ** 18 * 10 ** -17 = ", factorizeFormula("100001 * 10 ** 18 * 10 ** -17"));
+        console.log("100001 * 10 ** 18 * 10 ** -17 * 10 ** -2 = ", factorizeFormula("100001 * 10 ** 18 * 10 ** -17 * 10 ** -2"));
         console.log("\n")
         break;
       case '4': 
